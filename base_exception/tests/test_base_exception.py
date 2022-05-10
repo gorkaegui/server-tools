@@ -44,6 +44,7 @@ class TestBaseException(SavepointCase):
     def tearDownClass(cls):
         cls.loader.restore_registry()
         super().tearDownClass()
+        return
 
     def test_valid(self):
         self.exception_rule.active = False
